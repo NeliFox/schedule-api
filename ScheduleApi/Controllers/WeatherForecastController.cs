@@ -1,4 +1,6 @@
+using System.Data;
 using Microsoft.AspNetCore.Mvc;
+using MySqlConnector;
 
 namespace ScheduleApi.Controllers
 {
@@ -12,22 +14,31 @@ namespace ScheduleApi.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        private readonly MySqlConnection _dbConnection;
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, MySqlConnection dbConnection)
         {
+
+            _dbConnection = dbConnection;
             _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+       
+
+         [HttpGet]
+    public async Task<IActionResult> testing()
+    {
+            // DotNetEnv.Env.Load();
+            // var message = Environment.GetEnvironmentVariable("MESSAGE");
+       try
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            await _dbConnection.OpenAsync();
+            await _dbConnection.CloseAsync();
+            return Ok("Connection to the database was successful!");
         }
+        catch (Exception ex)
+        {
+            return StatusCode(500, $"Connection to the database failed: {ex.Message}");
+        }
+    }
     }
 }

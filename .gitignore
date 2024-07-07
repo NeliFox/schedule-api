@@ -217,3 +217,9 @@ vendor/
 
 # Mono Auto Generated Files
 mono_crash.*
+
+# User-specific files
+.env
+appsettings.Development.json
+appsettings.Production.json
+appsettings.json
