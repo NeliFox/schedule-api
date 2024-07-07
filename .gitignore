@@ -1,0 +1,219 @@
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (Mono Auto Generated)
+mono_crash.*
+
+# User-specific files (JetBrains Rider)
+.idea/
+*.sln.iml
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+[Oo]ut/
+[Tt]mp/
+
+# Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for the generated NUPKG in current project scenario
+!packages/*/build/
+
+# Include primary output assembly
+!bin//[Pp]rimary/
+
+# Don't ignore build folders under different directories
+!/[Bb]uild/
+
+# Don't ignore release folders under different directories
+!/[Rr]eleases/
+
+# Don't ignore debug folders under different directories
+!/[Dd]ebug/
+
+# Don't ignore temp folders under different directories
+!/[Tt]emp/
+
+# Don't ignore test result folders
+!/[Tt]est[Rr]esults/
+
+# Don't ignore logs folders
+!/[Ll]ogs/
+
+# NuGet
+*.nupkg
+*.snupkg
+# NuGet Symbol Packages
+*.symbols.nupkg
+
+# The packages folder can be ignored because of the NuGet restore
+*/[Pp]ackages/
+!/[Pp]ackages/build/
+
+# Uncomment if necessary however generally it will be in user profile location
+# to avoid uploading the whole packages folder
+# !/[Pp]ackages/
+
+# Uncomment if necessary however generally it will be in user profile location
+# !/[Pp]ackages/ */
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+.vscode-test/
+
+# Windows shortcut files
+*.lnk
+
+# Editor-specific files
+.idea
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# Rider
+.idea/
+*.sln.iml
+
+# Other files
+.settings/
+*.DS_Store
+*.sublime-project
+*.sublime-workspace
+*.env
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Visual Studio 2019 (v16)
+.vs/
+.vscode/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# macOS system files
+.DS_Store
+
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+
+# Logs
+logs/
+*.log
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Web server folders
+wwwroot/
+
+# Python compiled files
+_pycache_/
+
+# Coverage results
+coverage/
+
+# JavaScript generated files
+*.js.map
+
+# Database files
+*.sqlite
+*.sqlite3
+*.db
+
+# Composer dependencies
+vendor/
+
+# PHP Storm files
+.idea/
+
+# Laravel
+/vendor/
+.phpunit.result.cache
+.env
+
+# IDE-specific files
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Tooling
+**/coverage/
+**/node_modules/
+**/dist/
+**/tmp/
+**/build/
+**/.next/
+**/.nuxt/
+
+# Optional JetBrains Rider directories
+.idea/
+.idea/.idea/
+.idea/.idea[0-9]*/
+.idea/*.iws
+.idea/assetWizardSettings.xml
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/svn.xml
+.idea/tasks.xml
+.idea/workspace.xml
+.idea/misc.xml
+.idea/.sln/
+.idea/.vscode/
+.idea/.git/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Mono Auto Generated Files
+mono_crash.*
