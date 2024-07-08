@@ -20,17 +20,17 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Cargar la configuración desde appsettings.json
- builder.Configuration
-    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-    .AddEnvironmentVariables();
-    
+        builder.Configuration
+           .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+           .AddEnvironmentVariables();
+
         // Configurar la conexión a la base de datos MySQL
         builder.Services.AddTransient<MySqlConnection>(sp =>
         {
             var configuration = sp.GetRequiredService<IConfiguration>();
             var connectionString = configuration.GetConnectionString("DefaultConnection");
             Console.WriteLine(connectionString);
-            
+
             return new MySqlConnection(connectionString);
         });
 
