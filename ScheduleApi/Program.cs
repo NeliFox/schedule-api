@@ -34,12 +34,23 @@ public class Program
             return new MySqlConnection(connectionString);
         });
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowSpecificOrigin",
+                builder =>
+                {
+                    builder.WithOrigins("http://localhost:4200")
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                });
+        });
+
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
         var app = builder.Build();
-
+        app.UseCors("AllowSpecificOrigin");
         if (app.Environment.IsDevelopment())
         {
             app.UseSwagger();
