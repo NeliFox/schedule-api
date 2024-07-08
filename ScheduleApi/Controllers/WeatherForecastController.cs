@@ -31,8 +31,8 @@ namespace ScheduleApi.Controllers
             // var message = Environment.GetEnvironmentVariable("MESSAGE");
        try
         {
-            await _dbConnection.OpenAsync();
-            await _dbConnection.CloseAsync();
+            UserRepository userRepository = new UserRepository();
+            userRepository.GetUsers();
             return Ok("Connection to the database was successful!");
         }
         catch (Exception ex)
